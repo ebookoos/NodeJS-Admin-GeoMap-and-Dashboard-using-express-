@@ -10,7 +10,7 @@ function bomb() {
             this.CONSTANTS = {
                 map: null,
                 data: null,
-                url: "positions/position.json",
+                url: "mapjson/position.json",
                 status: true,
                 polyOptions: [
                     // {/*Lagos*/

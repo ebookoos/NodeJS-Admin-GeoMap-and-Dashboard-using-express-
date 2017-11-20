@@ -1,388 +1,461 @@
 extends layout
 
 block content
- html
-   body.fixed-left
-     // Begin page
-     #wrapper
-       // Top Bar Start
-       .topbar
-         // LOGO
-         .topbar-left
-           a.logo(href='index.html')
-             span
-               | Admin
-               span to
-             i.zmdi.zmdi-layers
-         // Button mobile view to collapse sidebar menu
-         .navbar.navbar-default(role='navigation')
-           .container
-             // Page title
-             ul.nav.navbar-nav.navbar-left
-               li
-                 button.button-menu-mobile.open-left
-                   i.zmdi.zmdi-menu
-               li
-                 h4.page-title Dashboard
-             // Right(Notification and Searchbox
-             ul.nav.navbar-nav.navbar-right
-               li
-                 // Notification
-                 .notification-box
-                   ul.list-inline.m-b-0
-                     li
-                       a.right-bar-toggle(href='javascript:void(0);')
-                         i.zmdi(class='zmdi-T`H`E`M`E`L`O`C`K`.`C`O`M`-none')
-                       .noti-dot
-                         span.dot
-                         span.pulse
-                 // End Notification bar
-               li.hidden-xs
-                 form.app-search(role='search')
-                   input.form-control(type='text', placeholder='Search...')
-                   a(href='')
-                     i.fa.fa-search
-           // end container
-         // end navbar
-       // Top Bar End
-       // ========== Left Sidebar Start ==========
-       .left.side-menu
-         .sidebar-inner.slimscrollleft
-           // User
-           .user-box
-             .user-img
-               img.img-circle.img-thumbnail.img-responsive(src='assets/images/users/avatar-1.jpg', alt='user-img', title='Mat Helme')
-               .user-status.offline
-                 i.zmdi.zmdi-dot-circle
-             h5
-               a(href='#') Mat Helme
-             ul.list-inline
-               li
-                 a(href='#')
-                   i.zmdi.zmdi-settings
-               li
-                 a.text-custom(href='#')
-                   i.zmdi.zmdi-power
-           // End User
-           // - Sidemenu
-           #sidebar-menu
-             ul
-               li.text-muted.menu-title Navigation
-               li
-                 a.waves-effect.active(href='index.html')
-                   i.zmdi.zmdi-view-dashboard
-                   span  Dashboard
-               li
-                 a.waves-effect(href='typography.html')
-                   i.zmdi.zmdi-format-underlined
-                   span  Typography
-               li.has_sub
-                 a.waves-effect(href='javascript:void(0);')
-                   i.zmdi.zmdi-invert-colors
-                   span  User Interface
-                   span.menu-arrow
-                 ul.list-unstyled
-                   li
-                     a(href='ui-buttons.html') Buttons
-                   li
-                     a(href='ui-cards.html') Cards
-                   li
-                     a(href='ui-checkbox-radio.html') Checkboxs-Radios
-                   li
-                     a(href='ui-material-icons.html') Material Design Icons
-                   li
-                     a(href='ui-font-awesome-icons.html') Font Awesome
-                   li
-                     a(href='ui-themify-icons.html') Themify Icons
-                   li
-                     a(href='ui-modals.html') Modals
-                   li
-                     a(href='ui-notification.html') Notification
-                   li
-                     a(href='ui-range-slider.html') Range Slider
-                   li
-                     a(href='ui-components.html') Components
-                   li
-                     a(href='ui-sweetalert.html') Sweet Alert
-                   li
-                     a(href='ui-treeview.html') Tree view
-                   li
-                     a(href='ui-widgets.html') Widgets
-               li.has_sub
-                 a.waves-effect(href='javascript:void(0);')
-                   i.zmdi.zmdi-collection-text
-                   span.label.label-warning.pull-right 7
-                   span  Forms
-                 ul.list-unstyled
-                   li
-                     a(href='form-elements.html') General Elements
-                   li
-                     a(href='form-advanced.html') Advanced Form
-                   li
-                     a(href='form-validation.html') Form Validation
-                   li
-                     a(href='form-wizard.html') Form Wizard
-                   li
-                     a(href='form-fileupload.html') Form Uploads
-                   li
-                     a(href='form-wysiwig.html') Wysiwig Editors
-                   li
-                     a(href='form-xeditable.html') X-editable
-               li.has_sub
-                 a.waves-effect(href='javascript:void(0);')
-                   i.zmdi.zmdi-view-list
-                   span  Tables
-                   span.menu-arrow
-                 ul.list-unstyled
-                   li
-                     a(href='tables-basic.html') Basic Tables
-                   li
-                     a(href='tables-datatable.html') Data Table
-                   li
-                     a(href='tables-editable.html') Editable Table
-               li.has_sub
-                 a.waves-effect(href='javascript:void(0);')
-                   i.zmdi.zmdi-chart
-                   span  Charts
-                   span.menu-arrow
-                 ul.list-unstyled
-                   li
-                     a(href='chart-flot.html') Flot Chart
-                   li
-                     a(href='chart-morris.html') Morris Chart
-                   li
-                     a(href='chart-chartist.html') Chartist Charts
-                   li
-                     a(href='chart-other.html') Other Chart
-               li
-                 a.waves-effect(href='calendar.html')
-                   i.zmdi.zmdi-calendar
-                   span.label.label-purple.pull-right New
-                   span  Calendar
-               li.has_sub
-                 a.waves-effect(href='javascript:void(0);')
-                   i.zmdi.zmdi-collection-item
-                   span  Pages
-                   span.menu-arrow
-                 ul.list-unstyled
-                   li
-                     a(href='page-starter.html') Starter Page
-                   li
-                     a(href='page-login.html') Login
-                   li
-                     a(href='page-register.html') Register
-                   li
-                     a(href='page-recoverpw.html') Recover Password
-                   li
-                     a(href='page-lock-screen.html') Lock Screen
-                   li
-                     a(href='page-confirm-mail.html') Confirm Mail
-                   li
-                     a(href='page-404.html') Error 404
-                   li
-                     a(href='page-500.html') Error 500
-               li.has_sub
-                 a.waves-effect(href='javascript:void(0);')
-                   i.zmdi.zmdi-layers
-                   span Extra Pages
-                   span.menu-arrow
-                 ul.list-unstyled
-                   li
-                     a(href='extras-projects.html') Projects
-                   li
-                     a(href='extras-tour.html') Tour
-                   li
-                     a(href='extras-taskboard.html') Taskboard
-                   li
-                     a(href='extras-taskdetail.html') Task Detail
-                   li
-                     a(href='extras-maps.html') Maps
-                   li
-                     a(href='extras-contact.html') Contact list
-                   li
-                     a(href='extras-pricing.html') Pricing
-                   li
-                     a(href='extras-timeline.html') Timeline
-                   li
-                     a(href='extras-invoice.html') Invoice
-                   li
-                     a(href='extras-faq.html') FAQ
-                   li
-                     a(href='extras-gallery.html') Gallery
-                   li
-                     a(href='extras-email-template.html') Email template
-                   li
-                     a(href='extras-maintenance.html') Maintenance
-                   li
-                     a(href='extras-comingsoon.html') Coming soon
-             .clearfix
-           // Sidebar
-           .clearfix
-       // Left Sidebar End
-       // ==============================================================
-       // Start right Content here
-       // ==============================================================
-       .content-page
-         // Start content
-         .content
-           .container
-             .row
-               .col-lg-12
-                 .card-box
-                   .dropdown.pull-right
-                     a.dropdown-toggle.card-drop(href='#', data-toggle='dropdown', aria-expanded='false')
-                       i.zmdi.zmdi-more-vert
-                     ul.dropdown-menu(role='menu')
-                       li
-                         a(href='#') Action
-                       li
-                         a(href='#') Another action
-                       li
-                         a(href='#') Something else here
-                       li.divider
-                       li
-                         a(href='#') Separated link
-                   h4.header-title.m-t-0.m-b-30 Location
-                   #map.chart.map
-               // end col
-             .row
-               .col-lg-12
-                 .card-box
-                   .dropdown.pull-right
-                     a.dropdown-toggle.card-drop(href='#', data-toggle='dropdown', aria-expanded='false')
-                       i.zmdi.zmdi-more-vert
-                     ul.dropdown-menu(role='menu')
-                       li
-                         a(href='#') Action
-                       li
-                         a(href='#') Another action
-                       li
-                         a(href='#') Something else here
-                       li.divider
-                       li
-                         a(href='#') Separated link
-                   h4.header-title.m-t-0.m-b-30 Latest Projects
-                   .table-responsive
-                     table.table
-                       thead
-                         tr
-                           th #
-                           th Project Name
-                           th Start Date
-                           th Due Date
-                           th Status
-                           th Assign
-                       tbody
-                         tr
-                           td 1
-                           td Adminto Admin v1
-                           td 01/01/2016
-                           td 26/04/2016
-                           td
-                             span.label.label-danger Released
-                           td Coderthemes
-                         tr
-                           td 2
-                           td Adminto Frontend v1
-                           td 01/01/2016
-                           td 26/04/2016
-                           td
-                             span.label.label-success Released
-                           td Adminto admin
-                         tr
-                           td 3
-                           td Adminto Admin v1.1
-                           td 01/05/2016
-                           td 10/05/2016
-                           td
-                             span.label.label-pink Pending
-                           td Coderthemes
-                         tr
-                           td 4
-                           td Adminto Frontend v1.1
-                           td 01/01/2016
-                           td 31/05/2016
-                           td
-                             span.label.label-purple Work in Progress
-                           td Adminto admin
-                         tr
-                           td 5
-                           td Adminto Admin v1.3
-                           td 01/01/2016
-                           td 31/05/2016
-                           td
-                             span.label.label-warning Coming soon
-                           td Coderthemes
-                         tr
-                           td 6
-                           td Adminto Admin v1.3
-                           td 01/01/2016
-                           td 31/05/2016
-                           td
-                             span.label.label-primary Coming soon
-                           td Adminto admin
-                         tr
-                           td 7
-                           td Adminto Admin v1.3
-                           td 01/01/2016
-                           td 31/05/2016
-                           td
-                             span.label.label-primary Coming soon
-                           td Adminto admin
-               // end col
-             // end row
-           // container
-         // content
-         footer.footer.text-center
-           | Ag youth Lab
-       // ==============================================================
-       // End Right content here
-       // ==============================================================
-       // Right Sidebar
-       .side-bar.right-bar
-         a.right-bar-toggle(href='javascript:void(0);')
-           i.zmdi.zmdi-close-circle-o
-         h4 T`H`E`M`E`L`O`C`K`.`C`O`M`
-         .notification-list.nicescroll
-           ul.list-group.list-no-border.user-list
-             li.list-group-item
-               a.user-list-item(href='#')
-                 .avatar
-                   img(src='assets/images/users/avatar-2.jpg', alt='')
-                 .user-desc
-                   span.name Michael Zenaty
-                   span.desc There are new settings available
-                   span.time 2 hours ago
-             li.list-group-item
-               a.user-list-item(href='#')
-                 .icon.bg-info
-                   i.zmdi.zmdi-account
-                 .user-desc
-                   span.name New Signup
-                   span.desc There are new settings available
-                   span.time 5 hours ago
-             li.list-group-item
-               a.user-list-item(href='#')
-                 .icon.bg-pink
-                   i.zmdi.zmdi-comment
-                 .user-desc
-                   span.name New Message received
-                   span.desc There are new settings available
-                   span.time 1 day ago
-             li.list-group-item.active
-               a.user-list-item(href='#')
-                 .avatar
-                   img(src='assets/images/users/avatar-3.jpg', alt='')
-                 .user-desc
-                   span.name James Anderson
-                   span.desc There are new settings available
-                   span.time 2 days ago
-             li.list-group-item.active
-               a.user-list-item(href='#')
-                 .icon.bg-warning
-                   i.zmdi.zmdi-settings
-                 .user-desc
-                   span.name Settings
-                   span.desc There are new settings available
-                   span.time 1 day ago
-       // /Right-bar
+  html
+    body.fixed-left
+      // Begin page
+      #wrapper
+        // Top Bar Start
+        .topbar
+          // LOGO
+          .topbar-left
+            a.logo(href='index.html')
+              span
+                | Admin
+                span to
+              i.zmdi.zmdi-layers
+          // Button mobile view to collapse sidebar menu
+          .navbar.navbar-default(role='navigation')
+            .container
+              // Page title
+              ul.nav.navbar-nav.navbar-left
+                li
+                  button.button-menu-mobile.open-left
+                    i.zmdi.zmdi-menu
+                li
+                  h4.page-title Dashboard
+              // Right(Notification and Searchbox
+              ul.nav.navbar-nav.navbar-right
+                li
+                  // Notification
+                  .notification-box
+                    ul.list-inline.m-b-0
+                      li
+                        a.right-bar-toggle(href='javascript:void(0);')
+                          i.zmdi(class='zmdi-T`H`E`M`E`L`O`C`K`.`C`O`M`-none')
+                        .noti-dot
+                          span.dot
+                          span.pulse
+                  // End Notification bar
+                li.hidden-xs
+                  form.app-search(role='search')
+                    input.form-control(type='text', placeholder='Search...')
+                    a(href='')
+                      i.fa.fa-search
+            // end container
+          // end navbar
+        // Top Bar End
+        // ========== Left Sidebar Start ==========
+        .left.side-menu
+          .sidebar-inner.slimscrollleft
+            // User
+            .user-box
+              .user-img
+                img.img-circle.img-thumbnail.img-responsive(src='assets/images/users/avatar-1.jpg', alt='user-img', title='Mat Helme')
+                .user-status.offline
+                  i.zmdi.zmdi-dot-circle
+              h5
+                a(href='#') Mat Helme
+              ul.list-inline
+                li
+                  a(href='#')
+                    i.zmdi.zmdi-settings
+                li
+                  a.text-custom(href='#')
+                    i.zmdi.zmdi-power
+            // End User
+            // - Sidemenu
+            #sidebar-menu
+              ul
+                li.text-muted.menu-title Navigation
+                li
+                  a.waves-effect.active(href='index.html')
+                    i.zmdi.zmdi-view-dashboard
+                    span  Dashboard
+                li
+                  a.waves-effect(href='typography.html')
+                    i.zmdi.zmdi-format-underlined
+                    span  Typography
+                li.has_sub
+                  a.waves-effect(href='javascript:void(0);')
+                    i.zmdi.zmdi-invert-colors
+                    span  User Interface
+                    span.menu-arrow
+                  ul.list-unstyled
+                    li
+                      a(href='ui-buttons.html') Buttons
+                    li
+                      a(href='ui-cards.html') Cards
+                    li
+                      a(href='ui-checkbox-radio.html') Checkboxs-Radios
+                    li
+                      a(href='ui-material-icons.html') Material Design Icons
+                    li
+                      a(href='ui-font-awesome-icons.html') Font Awesome
+                    li
+                      a(href='ui-themify-icons.html') Themify Icons
+                    li
+                      a(href='ui-modals.html') Modals
+                    li
+                      a(href='ui-notification.html') Notification
+                    li
+                      a(href='ui-range-slider.html') Range Slider
+                    li
+                      a(href='ui-components.html') Components
+                    li
+                      a(href='ui-sweetalert.html') Sweet Alert
+                    li
+                      a(href='ui-treeview.html') Tree view
+                    li
+                      a(href='ui-widgets.html') Widgets
+                li.has_sub
+                  a.waves-effect(href='javascript:void(0);')
+                    i.zmdi.zmdi-collection-text
+                    span.label.label-warning.pull-right 7
+                    span  Forms
+                  ul.list-unstyled
+                    li
+                      a(href='form-elements.html') General Elements
+                    li
+                      a(href='form-advanced.html') Advanced Form
+                    li
+                      a(href='form-validation.html') Form Validation
+                    li
+                      a(href='form-wizard.html') Form Wizard
+                    li
+                      a(href='form-fileupload.html') Form Uploads
+                    li
+                      a(href='form-wysiwig.html') Wysiwig Editors
+                    li
+                      a(href='form-xeditable.html') X-editable
+                li.has_sub
+                  a.waves-effect(href='javascript:void(0);')
+                    i.zmdi.zmdi-view-list
+                    span  Tables
+                    span.menu-arrow
+                  ul.list-unstyled
+                    li
+                      a(href='tables-basic.html') Basic Tables
+                    li
+                      a(href='tables-datatable.html') Data Table
+                    li
+                      a(href='tables-editable.html') Editable Table
+                li.has_sub
+                  a.waves-effect(href='javascript:void(0);')
+                    i.zmdi.zmdi-chart
+                    span  Charts
+                    span.menu-arrow
+                  ul.list-unstyled
+                    li
+                      a(href='chart-flot.html') Flot Chart
+                    li
+                      a(href='chart-morris.html') Morris Chart
+                    li
+                      a(href='chart-chartist.html') Chartist Charts
+                    li
+                      a(href='chart-other.html') Other Chart
+                li
+                  a.waves-effect(href='calendar.html')
+                    i.zmdi.zmdi-calendar
+                    span.label.label-purple.pull-right New
+                    span  Calendar
+                li.has_sub
+                  a.waves-effect(href='javascript:void(0);')
+                    i.zmdi.zmdi-collection-item
+                    span  Pages
+                    span.menu-arrow
+                  ul.list-unstyled
+                    li
+                      a(href='page-starter.html') Starter Page
+                    li
+                      a(href='page-login.html') Login
+                    li
+                      a(href='page-register.html') Register
+                    li
+                      a(href='page-recoverpw.html') Recover Password
+                    li
+                      a(href='page-lock-screen.html') Lock Screen
+                    li
+                      a(href='page-confirm-mail.html') Confirm Mail
+                    li
+                      a(href='page-404.html') Error 404
+                    li
+                      a(href='page-500.html') Error 500
+                li.has_sub
+                  a.waves-effect(href='javascript:void(0);')
+                    i.zmdi.zmdi-layers
+                    span Extra Pages
+                    span.menu-arrow
+                  ul.list-unstyled
+                    li
+                      a(href='extras-projects.html') Projects
+                    li
+                      a(href='extras-tour.html') Tour
+                    li
+                      a(href='extras-taskboard.html') Taskboard
+                    li
+                      a(href='extras-taskdetail.html') Task Detail
+                    li
+                      a(href='extras-maps.html') Maps
+                    li
+                      a(href='extras-contact.html') Contact list
+                    li
+                      a(href='extras-pricing.html') Pricing
+                    li
+                      a(href='extras-timeline.html') Timeline
+                    li
+                      a(href='extras-invoice.html') Invoice
+                    li
+                      a(href='extras-faq.html') FAQ
+                    li
+                      a(href='extras-gallery.html') Gallery
+                    li
+                      a(href='extras-email-template.html') Email template
+                    li
+                      a(href='extras-maintenance.html') Maintenance
+                    li
+                      a(href='extras-comingsoon.html') Coming soon
+              .clearfix
+            // Sidebar
+            .clearfix
+        // Left Sidebar End
+        // ==============================================================
+        // Start right Content here
+        // ==============================================================
+        .content-page
+          // Start content
+          .content
+            .container
+              .row
+                .col-lg-12
+                  .card-box
+                    .dropdown.pull-right
+                      a.dropdown-toggle.card-drop(href='#', data-toggle='dropdown', aria-expanded='false')
+                        i.zmdi.zmdi-more-vert
+                      ul.dropdown-menu(role='menu')
+                        li
+                          a(href='#') Action
+                        li
+                          a(href='#') Another action
+                        li
+                          a(href='#') Something else here
+                        li.divider
+                        li
+                          a(href='#') Separated link
+                    h4.header-title.m-t-0.m-b-30 Location
+                    #map.chart.map
+                // end col
+              .row
+                .col-lg-12
+                  .card-box
+                    .dropdown.pull-right
+                      a.dropdown-toggle.card-drop(href='#', data-toggle='dropdown', aria-expanded='false')
+                        i.zmdi.zmdi-more-vert
+                      ul.dropdown-menu(role='menu')
+                        li
+                          a(href='#') Action
+                        li
+                          a(href='#') Another action
+                        li
+                          a(href='#') Something else here
+                        li.divider
+                        li
+                          a(href='#') Separated link
+                    h4.header-title.m-t-0.m-b-30 Latest Projects
+                    .table-responsive
+                      table#example.table
+                        thead
+                          tr
+                            th
+                            th Name of Facility
+                            th  Location of Facility
+                            th Contact Address
+                            th Name of Contact person
+                            th Phone Number
+                            th Contact Email
+                            th Description/Type of Facility Established
+                            th When Was Your Facility Established
+                            th Ownership Category
+                            th Role
+                            th Current Status
+                            th Opening Hours
+                            th [Good Internet Connection ?]
+                            th  [Running Water ?]
+                            th [Electricity ?]
+                            th [A Backup Power Generator ?]
+                            th [Restroom ?]
+                            th [ Gender-Specific Restrooms ?]
+                            th [Conference Room?]
+                            th [Projector (In the Conference Room)?]
+                            th  [Public Address System?]
+                            th
+                              | How would you rate the following: [Quality of the Facility's Internet Connection]
+                            th
+                              | How would you rate the following: [The response speed of your back up power supply in the event of a blackout?]
+                            th
+                              | How would you rate the following: [The stability of your back up electricity supply?]
+                            th
+                              | How would you rate the following: [The quality of your restrooms]
+                            th
+                              | How would you rate the following: [The performance of your public-address system]
+                            th
+                              | How would you rate the following: [The effectiveness of your facility’s air conditioning system.]
+                            th
+                              | What is the seating capacity of your conference room?
+                            th
+                              | Does your facility have practical training sites conforming to the AYL target value chains?
+                            th  If yes, which of the following value chains?
+                            th
+                              | How many trainees can each of your practical training sites hold at a time? [Cassava]
+                            th
+                              | How many trainees can each of your practical training sites hold at a time? [Fisheries]
+                            th
+                              | How many trainees can each of your practical training sites hold at a time? [Poultry]
+                            th
+                              | How many trainees can each of your practical training sites hold at a time? [Oil Seeds]
+                            th  [Cassava]
+                            th  [Fisheries]
+                            th  [Poultry]
+                            th  [Oil Seeds]
+                            th [Horticulture]
+                            th
+                              | What is the distance of your facility from the nearest trading center?
+                            th
+                              | What is the most convenient form of public transportation to access your facility from the nearest trading center?
+                            th
+                              | How much does that mode of public transportation to your facility cost from the nearest trading center?
+                            th  What is the distance of your facility from the main road?
+                            th Does your facility have accommodations?
+                            th
+                              | If yes, please state the capacity of your facility’s accommodations
+                            th
+                              | How would you rate the standard of your facility’s accommodations? [Accommodation]
+                            th   Does your facility have culinary services?
+                            th  If yes, what is the least cost of food per plate?
+                            th
+                              | If no, are there alternative culinary service providers outside your facility?
+                            th
+                              | If yes, what is the distance of the nearest culinary service provider from your facility?
+                            th
+                              | How might the AYL contribute to the success of the training program conducted in your facility?
+                            th
+                              | How might you contribute to the success of the training program conducted in your facility?
+                        // <tbody>
+                        // <tr>
+                        // <td>1</td>
+                        // <td>Adminto Admin v1</td>
+                        // <td>01/01/2016</td>
+                        // <td>26/04/2016</td>
+                        // <td><span class="label label-danger">Released</span></td>
+                        // <td>Coderthemes</td>
+                        // </tr>
+                        // <tr>
+                        // <td>2</td>
+                        // <td>Adminto Frontend v1</td>
+                        // <td>01/01/2016</td>
+                        // <td>26/04/2016</td>
+                        // <td><span class="label label-success">Released</span></td>
+                        // <td>Adminto admin</td>
+                        // </tr>
+                        // <tr>
+                        // <td>3</td>
+                        // <td>Adminto Admin v1.1</td>
+                        // <td>01/05/2016</td>
+                        // <td>10/05/2016</td>
+                        // <td><span class="label label-pink">Pending</span></td>
+                        // <td>Coderthemes</td>
+                        // </tr>
+                        // <tr>
+                        // <td>4</td>
+                        // <td>Adminto Frontend v1.1</td>
+                        // <td>01/01/2016</td>
+                        // <td>31/05/2016</td>
+                        // <td><span class="label label-purple">Work in Progress</span>
+                        // </td>
+                        // <td>Adminto admin</td>
+                        // </tr>
+                        // <tr>
+                        // <td>5</td>
+                        // <td>Adminto Admin v1.3</td>
+                        // <td>01/01/2016</td>
+                        // <td>31/05/2016</td>
+                        // <td><span class="label label-warning">Coming soon</span></td>
+                        // <td>Coderthemes</td>
+                        // </tr>
+                        // <tr>
+                        // <td>6</td>
+                        // <td>Adminto Admin v1.3</td>
+                        // <td>01/01/2016</td>
+                        // <td>31/05/2016</td>
+                        // <td><span class="label label-primary">Coming soon</span></td>
+                        // <td>Adminto admin</td>
+                        // </tr>
+                        // <tr>
+                        // <td>7</td>
+                        // <td>Adminto Admin v1.3</td>
+                        // <td>01/01/2016</td>
+                        // <td>31/05/2016</td>
+                        // <td><span class="label label-primary">Coming soon</span></td>
+                        // <td>Adminto admin</td>
+                        // </tr>
+                        // </tbody>
+                        // <tbody></tbody>
+                // end col
+              // end row
+            // container
+          // content
+          footer.footer.text-center
+            | Ag youth Lab
+        // ==============================================================
+        // End Right content here
+        // ==============================================================
+        // Right Sidebar
+        .side-bar.right-bar
+          a.right-bar-toggle(href='javascript:void(0);')
+            i.zmdi.zmdi-close-circle-o
+          h4 T`H`E`M`E`L`O`C`K`.`C`O`M`
+          .notification-list.nicescroll
+            ul.list-group.list-no-border.user-list
+              li.list-group-item
+                a.user-list-item(href='#')
+                  .avatar
+                    img(src='assets/images/users/avatar-2.jpg', alt='')
+                  .user-desc
+                    span.name Michael Zenaty
+                    span.desc There are new settings available
+                    span.time 2 hours ago
+              li.list-group-item
+                a.user-list-item(href='#')
+                  .icon.bg-info
+                    i.zmdi.zmdi-account
+                  .user-desc
+                    span.name New Signup
+                    span.desc There are new settings available
+                    span.time 5 hours ago
+              li.list-group-item
+                a.user-list-item(href='#')
+                  .icon.bg-pink
+                    i.zmdi.zmdi-comment
+                  .user-desc
+                    span.name New Message received
+                    span.desc There are new settings available
+                    span.time 1 day ago
+              li.list-group-item.active
+                a.user-list-item(href='#')
+                  .avatar
+                    img(src='assets/images/users/avatar-3.jpg', alt='')
+                  .user-desc
+                    span.name James Anderson
+                    span.desc There are new settings available
+                    span.time 2 days ago
+              li.list-group-item.active
+                a.user-list-item(href='#')
+                  .icon.bg-warning
+                    i.zmdi.zmdi-settings
+                  .user-desc
+                    span.name Settings
+                    span.desc There are new settings available
+                    span.time 1 day ago
+        // /Right-bar
+      // END wrapper
+

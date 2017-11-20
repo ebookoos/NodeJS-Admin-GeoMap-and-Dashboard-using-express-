@@ -66,3 +66,76 @@ html
     // geomap
     script(src='https://maps.googleapis.com/maps/api/js?key=AIzaSyDJMtW-0RmQ-cv7RZBR0Zs5tTmmPjaxrCY')
     script(src='assets/js/map.js')
+    script(type='text/javascript', src='https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js')
+    script.
+        $(document).ready(function () {
+            $('#example').DataTable({
+                "scrollX": true,
+                "ajax": "dashboardjson/data.json"
+                //  "columns": [
+                //      {"data":""},
+                //  { "data": "Name of Facility" },
+                //      {"data":"Location of Facility"},
+                //  { "data": "Contact Address" },
+                //  { "data": "Name of Contact Person" },
+                //  { "data": "Phone Number" },
+                //  { "data": "Contact Email" },
+                //  { "data": "Description/Type of Facility" },
+                //    { "data": "When Was Your Facility Established?" },
+                //    { "data": "Ownership Category" },
+                //    { "data": "Name of Contact Person" },
+                //    { "data": "Role" },
+                //    { "data": "Current Status" },
+                //    { "data": "Opening Hours" },
+                //
+                //    { "data": "[Good Internet Connection?]" },
+                //    { "data": "[Running Water?]" },
+                //    { "data": "[Electricity?]" },
+                //    { "data": "[A Backup Power Generator?]" },
+                //    { "data": "[Restrooms?]" },
+                //    { "data": "[Gender-Specific Restrooms?]" },
+                //    { "data": "[Conference Room?]" },
+                //    { "data": "[Projector (In the Conference Room)?]" },
+                //    { "data": "[Public Address System?]" },
+                //    { "data": "How would you rate the following: [Quality of the Facility's Internet Connection]" },
+                //    { "data": "How would you rate the following: [The response speed of your back up power supply in the event of a blackout?]" },
+                //    { "data": "How would you rate the following: [The stability of your back up electricity supply?]" },
+                //
+                //    { "data": "How would you rate the following: [The quality of your restrooms]" },
+                //    { "data": "How would you rate the following: [The performance of your public-address system]" },
+                //    { "data": "How would you rate the following: [The effectiveness of your facility’s air conditioning system.]" },
+                //    { "data": "What is the seating capacity of your conference room?" },
+                //    { "data": "Does your facility have practical training sites conforming to the AYL target value chains?" },
+                //    { "data": "If yes, which of the following value chains?" },
+                //    { "data": "How many trainees can each of your practical training sites hold at a time? [Cassava]" },
+                //    { "data": "How many trainees can each of your practical training sites hold at a time? [Fisheries]" },
+                //    { "data": "How many trainees can each of your practical training sites hold at a time? [Poultry]" },
+                //    { "data": "How many trainees can each of your practical training sites hold at a time? [Oil Seeds]" },
+                //    { "data": "[Cassava]" },
+                //    { "data": "[Fisheries]" },
+                //
+                //
+                //    { "data": "[Poultry]" },
+                //    { "data": "[Oil Seeds]" },
+                //    { "data": "[Horticulture]" },
+                //    { "data": "[Horticulture]" },
+                //    { "data": "[Horticulture]" },
+                //    { "data": "What is the distance of your facility from the nearest trading center?" },
+                //    { "data": "What is the most convenient form of public transportation to access your facility from the nearest trading center?" },
+                //    { "data": "How much does that mode of public transportation to your facility cost from the nearest trading center?" },
+                //    { "data": "What is the distance of your facility from the main road?" },
+                //    { "data": "Does your facility have accommodations?" },
+                //    { "data": "If yes, please state the capacity of your facility’s accommodations" },
+                //    { "data": "How would you rate the standard of your facility’s accommodations? [Accommodation]" },
+                //
+                //      {"data": "Does your facility have culinary services?" },
+                //    { "data": "If yes, what is the least cost of food per plate?" },
+                //    { "data": "If no, are there alternative culinary service providers outside your facility?" },
+                //    { "data": "If yes, what is the distance of the nearest culinary service provider from your facility?" },
+                //    { "data": "How might the AYL contribute to the success of the training program conducted in your facility?" },
+                //    { "data": "How might you contribute to the success of the training program conducted in your facility?" }
+                //
+                //
+                //    ]
+            });
+        });
